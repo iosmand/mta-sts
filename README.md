@@ -31,6 +31,10 @@ The policy is served at `https://mta-sts.{domain}/.well-known/mta-sts.txt` and m
 - **Policy File**: Edit `mta-sts.txt` to update your MTA-STS policy
 - **Port**: Set `HTTP_PORT` environment variable (default: 80)
 
+## MX Records
+
+Remember to update the `mx:` entries in `mta-sts.txt` to match your domain's MX records, not the example ones provided.
+
 ## Usage
 
 1. Start the service:
