@@ -1,5 +1,0 @@
-:80 {
-    root * /srv
-    file_server
-    header Content-Type text/plain
-}

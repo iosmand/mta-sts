@@ -1,10 +1,10 @@
-# MTA-STS Docker Caddy
+# MTA-STS HTTPD
 
-A simple Docker setup using Caddy to serve MTA-STS (Mail Transfer Agent Strict Transport Security) policy for email security.
+A minimal Docker setup using BusyBox httpd to serve MTA-STS (Mail Transfer Agent Strict Transport Security) policy for email security.
 
 ## Description
 
-MTA-STS is an email security standard that helps prevent man-in-the-middle attacks during email delivery by enforcing TLS encryption. This project provides a minimal Docker containerized solution using Caddy web server to host the MTA-STS policy file.
+MTA-STS is an email security standard that helps prevent man-in-the-middle attacks during email delivery by enforcing TLS encryption. This project provides a tiny Docker containerized solution using BusyBox httpd to host the MTA-STS policy file.
 
 The policy is served at `https://mta-sts.{domain}/.well-known/mta-sts.txt` and must be accessible over HTTPS.
 
@@ -17,8 +17,8 @@ The policy is served at `https://mta-sts.{domain}/.well-known/mta-sts.txt` and m
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/iosmand/mta-sts-docker-caddy.git
-   cd mta-sts-docker-caddy
+   git clone https://github.com/iosmand/mta-sts-docker-httpd.git
+   cd mta-sts-docker-httpd
    ```
 
 2. Configure the environment:
@@ -29,7 +29,6 @@ The policy is served at `https://mta-sts.{domain}/.well-known/mta-sts.txt` and m
 ## Configuration
 
 - **Policy File**: Edit `mta-sts.txt` to update your MTA-STS policy
-- **Caddy Config**: Modify `Caddyfile` if needed
 - **Port**: Set `HTTP_PORT` environment variable (default: 80)
 
 ## Usage
