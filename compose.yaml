@@ -11,4 +11,4 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: 1M       
+          memory: 6M # minimum memory limit 6M
